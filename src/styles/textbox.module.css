@@ -1,0 +1,26 @@
+.container {
+    background-color: var(--grey);
+    padding: 4px 12px;
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    height: auto;
+    width: fit-content;
+    gap: 2px;
+}
+
+.text {
+    font-family: "Roboto-Regular";
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
