@@ -1,8 +1,6 @@
 import React from 'react'
-import { Icon } from '@iconify/react';
 import styles from '../styles/cards.module.css'
 import TextBox from './TextBox';
-import Button from './buttons/Button'
 
 export default function ExperienceCard({
     title="Title",
@@ -12,16 +10,13 @@ export default function ExperienceCard({
     }) {
 
   return (
-    <div className={styles.Container}>
-        <div className={styles.Card}>
-            <h3>{title}</h3>
-            <p className={styles.text}>{subtitle}</p>
-            <div className={styles.SkillsContainer}>
-                <TextBox text={company}/>
-            </div>
-            <p className={styles.text}>{text}</p>
+    <div className={styles.card}>
+        <h3>{title}</h3>
+        <p className={styles.text}>{subtitle}</p>
+        <div className={styles['skills-container']}>
+            <TextBox text={company}/>
         </div>
-        
+        {/* <p className={styles.text}>{text}</p> */}
     </div>
   )
 }

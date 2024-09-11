@@ -1,4 +1,4 @@
-.Card {
+.card {
     display: flex;
     flex-direction: column;
     background-color: var(--grey);
@@ -9,7 +9,7 @@
     gap: 18px;
 }
 
-.SkillsContainer {
+.skills-container {
     display: flex;
     gap: 5px;
     align-items: center;
@@ -17,7 +17,7 @@
     flex-wrap: wrap;
 }
 
-.SkillsContainer * {
+.skills-container * {
     border-color: var(--white);
 }
 
@@ -27,4 +27,11 @@ h3 {
 
 .text {
     color: var(--white);
+}
+
+@media screen and (min-width: 1000px) {
+    .card#project-card{
+        background-color: var(--dark-grey);
+        /* width: 400px; */
+    }
 }

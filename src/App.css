@@ -31,14 +31,30 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 48px;
+  gap: 60px;
   align-self: stretch;
 }
 
-.experience-container {
+.experience-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
   min-width: 340px;
+  max-width: 1000px;
   width: 80%;
   padding: 0 32px;
+  height: auto;
+}
+
+.experience-container > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  /* max-width: 80%; */
+  max-width: 470px;
+  gap: 60px;
 }
 
 .welcome-container {
@@ -49,7 +65,7 @@
 
 h1 {
   font-family: "Barlow-Medium";
-  font-size: 28px;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 1.68px;
@@ -59,7 +75,7 @@ h1 {
 
 h2 {
   font-family: "Barlow-Medium";
-  font-size: 24px;
+  font-size: 1.5rem;
   font-style: normal;
   text-transform: uppercase;
   text-align: center;
@@ -71,7 +87,7 @@ h2 {
 
 h3 {
   font-family: "Barlow-Medium";
-  font-size: 20px;
+  font-size: 1.25rem;
   font-style: normal;
   text-transform: uppercase;
   text-align: start;
@@ -82,8 +98,7 @@ h3 {
 }
 
 hr {
-  background-color: #E1B03B;
-  border-color: #E1B03B;
+  background-color: var(--primary);
   border: none;
   border-radius: 2px;
   height: 2px;
@@ -93,31 +108,140 @@ hr {
 
 p {
   font-family: "Roboto-Regular";
-  font-size: 12px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
-  display: flex;
   line-height: normal;
 }
 
 .skills-text {
-  width: 80%;
+  /* width: 80%; */
   color: var(--white);
   font-family: "Roboto-Regular";
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 400;
   max-width: 400px;
   text-align: center;
 }
 
-.experience-group {
+.skills-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  min-width: 340px;
+  width: 80%;
+  padding: 0 32px;
+  height: auto;
+  max-width: 1000px;
+}
+
+.skills-container > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.skills-group {
   display: flex;
   flex-direction: column;
   gap: 18px;
   align-items: center;
+
 }
 
-.experience-group h3 {
+.skills-group > div {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skills-group h3 {
   color: var(--white);
+}
+
+.courses-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  min-width: 340px;
+  max-width: 1000px;
+  width: 80%;
+  padding: 0 32px;
+  height: auto;
+}
+
+.courses-container > div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 60px;
+}
+
+.vertical-line {
+  min-width: 2px;
+  background-color: var(--grey);
+  border-radius: 2px;
+}
+
+@media screen and (min-width: 800px){
+  
+}
+
+@media screen and (min-width: 900px){
+  
+}
+
+@media screen and (min-width: 1000px){ 
+  .body {
+    gap: 80px;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.375rem;
+  }
+
+  .experience-container {
+    flex-direction: row;
+    gap: 80px;
+    justify-content: center;
+  }
+
+  .experience-container > div > div {
+    min-width: 400px;
+  }
+
+  .experience-container hr {
+    width: 2px;
+    min-width: 2px;
+    height: 200px;
+    background-color: var(--grey);
+  }
+
+  .skills-container {
+    flex-direction: row;
+  }
+
+  .skills-container > * {
+    flex: 1;
+  }
+
+  .courses-container > div {
+    flex-direction: row;
+    gap: 80px;
+  }
 }

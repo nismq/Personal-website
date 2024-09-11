@@ -3,14 +3,15 @@ import styles from '../styles/cards.module.css'
 import TextBox from './TextBox';
 import Button from './buttons/Button'
 
-export default function ProjectCard({
+export default function CourseCard({
     title="Title",
-    subtitle="...",
+    author="Author",
     skill1="skill 1",
     skill2="skill 2",
     skill3="skill 3", 
     text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat, justo cursus posuere fringilla, enim sapien elementum urna, non aliquam sem sem nec sem. Maecenas consectetur massa porta suscipit laoreet. Vestibulum quis massa ut libero malesuada.",
-    url='https://github.com/nismq'
+    button_text = 'Udemy',
+    url='https://www.google.com/',
   }) {
 
   const handleClick = () => {
@@ -19,16 +20,10 @@ export default function ProjectCard({
 
 
   return (
-    <div id={styles['project-card']} className={styles.card}>
+    <div id={styles['course-card']} className={styles.card}>
         <h3>{title}</h3>
-        <p className={styles.text}>{subtitle} project</p>
-        <div className={styles['skills-container']}>
-          <TextBox text={skill1}/>
-          <TextBox text={skill2}/>
-          <TextBox text={skill3}/>
-        </div>
-        <p className={styles.text}>{text}</p>
-        <Button show_icon text='GitHub' onClick={handleClick}/>
+        <p className={styles.text}>{author}</p>
+        <Button show_icon text={button_text} onClick={handleClick}/>
     </div>
   )
 }
