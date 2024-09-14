@@ -9,7 +9,7 @@ const Slideshow = ({ images , projectCard = <ProjectCard/>}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [containerHeight, setContainerHeight] = useState()
   const imageList = images.map((image, index) => 
-  <img src={image} alt={`Slide ${index}`} style={{maxWidth:'100%', maxHeight:'100%'}} />
+  <img src={image} alt={`Slide ${index}`} className={styles['project-photo']} />
   )
   const [itemsList] = useState([projectCard, ...imageList])
   const ref = useRef(null)

@@ -34,8 +34,18 @@
     color: var(--white);
 }
 
-.about-me-text > p {
-    /* font-size: 1rem; */
+.adjective-wrapper {
+    display: flex;
+    min-width: 250px;    
+    max-width: 360px;
+    width: 70%;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.adjective-info-text {
+    color: var(--white);
+    text-align: center;
 }
 
 .PlaceHolderImage {
@@ -47,18 +57,19 @@
 .facial-image {
     width: 226px;
     height: auto;
+    transition: transform 0.3s ease;
+}
+
+.facial-image:hover {
+    transform: scale(1.1);
 }
 
 .adjective-slider {
     display: flex;
-    min-width: 250px;    
-    max-width: 360px;
-    width: 70%;
+    min-height: 50px;
     gap: 10px;
     align-items: center;
-    /* color: var(--gray); */
     justify-content: space-between;
-    /* background-color: black; */
 }
 
 .adjective-slots {

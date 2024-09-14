@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from '../styles/header.module.css'
 import Button from './buttons/Button'
+import { Icon } from '@iconify/react';
 
 export default function Header() {
 
@@ -27,6 +28,8 @@ export default function Header() {
         </div>
       </div>
       <h1 className={styles['welcome-text']} >WELCOME</h1>
+      <p className={styles['scroll-text']} >Scroll</p>
+      <Icon className={styles.icon} icon="iconamoon:arrow-down-2-bold" width="24" height="24"/>
     </header>
   )
 }

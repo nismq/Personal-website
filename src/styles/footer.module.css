@@ -8,3 +8,18 @@
     align-self: stretch;
     color: var(--white);
 }
+
+.link {
+    all: unset;
+    transition: transform 0.3s ease;
+}
+  
+.link:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+  
+.link:active {
+    transform: scale(0.9);
+} 
+  

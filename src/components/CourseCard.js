@@ -23,7 +23,9 @@ export default function CourseCard({
     <div id={styles['course-card']} className={styles.card}>
         <h3>{title}</h3>
         <p className={styles.text}>{author}</p>
-        <Button show_icon text={button_text} onClick={handleClick}/>
+        <a href={url} target='_blank' rel="noreferrer" style={{textDecoration: 'none'}}>
+          <Button show_icon text={button_text}/>
+        </a>  
     </div>
   )
 }

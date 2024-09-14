@@ -10,12 +10,6 @@ import TextBox from './components/TextBox';
 import CourseCard from './components/CourseCard';
 import { useMediaQuery } from 'react-responsive';
 
-const images = [
-  'https://picsum.photos/200/300',
-  'https://picsum.photos/300/200',
-  'https://placehold.co/600x400'
-];
-
 const SWIPPER_IMAGES = [
   require('./assets/images/swipperMainPage.png'),
   require('./assets/images/swipperFeedPage.png'),
@@ -65,6 +59,11 @@ function App() {
                                                              skill1='React'
                                                              skill2='JavaScript'
                                                              skill3='HTML'
+                                                             text='I created this website as a place to showcase my projects 
+                                                             and my skills. Building it has also improved my expertise in web 
+                                                             development as well as hosting and maintaining my own website. 
+                                                             For the development of this site, I used React, a popular JavaScript 
+                                                             library for building user interfaces.'
                                                              url='https://github.com/nismq/Personal-website'/>}/>
         <Slideshow images={SWIPPER_IMAGES} projectCard={<ProjectCard title='Swipper Frontend'
                                                              subtitle='School'
@@ -99,8 +98,17 @@ function App() {
         <div ref={ref} className='experience-container'>
           <div>
             <h2 id='experience' >Experience</h2>
-            <ExperienceCard title='Junior Test Engineer' subtitle='May 2023 - Present' company='Topcon Healthcare Solutions'/>
-
+            <ExperienceCard title='Junior Test Engineer' 
+              subtitle='May 2023 - Present' 
+              company='Topcon Healthcare Solutions'
+              paragraph1='As a Junior Test Engineer, my work involves a diverse set of responsibilities 
+              from issue testing to enhancing the quality and efficiency of our testing processes. One of my key 
+              contributions has been developing a Python script for our testing team, which ensures 
+              that all requirements are linked to corresponding test cases.'
+              paragraph2='I have actively contributed to improving our test automation by proposing
+               enhancements and providing feedback during code reviews, which has led to increased 
+               quality in our automated tests.'
+            />
           </div>
           {/* <div className='vertical-line'></div> */}
           {isWideScreen 
@@ -110,7 +118,16 @@ function App() {
           {/* <span style={{display: 'inline-block', width:'1px', height:'100px', background:'#000', margin: '0 2px',}}></span> */}
           <div>
             <h2 id='education' >Education</h2>
-            <ExperienceCard title='Information technology' subtitle='2021 - Present' company='Oulu University of Applied Sciences' />
+            <ExperienceCard title='Information technology' 
+              subtitle='2021 - Present' 
+              company='Oulu University of Applied Sciences' 
+              paragraph1='I am studying information technology in the option of software development. 
+              My education has provided a solid and diverse foundation across various areas of IT, ranging 
+              from software project management to proficiency in individual programming languages.'
+              paragraph2='Throughout my studies, I have gained hands-on experience with several 
+              programming languages, including Java, JavaScript, C, C++, CSS, HTML, and SQL. In my 
+              elective courses, I have further developed my skills in software testing and information security.'
+            />
           </div>
         </div>
         <hr/>
@@ -126,17 +143,15 @@ function App() {
         <div className='skills-container'>
           <div> 
             <div className='skills-group'>
-              <div style={{display:'flex', gap: "9px",}}>
-                <TextBox text='React'/>
-                <TextBox text='JavaScript'/>
-                <TextBox text='Software Testing'/>
-                <TextBox text='Robot Framework'/>
-                <TextBox text='Python'/>
-                <TextBox text='Test Automation'/>
-                <TextBox text='SQL'/>
-                <TextBox text='Problem Solving'/>
-                <TextBox text='Java'/>
-              </div>
+              <TextBox text='React'/>
+              <TextBox text='JavaScript'/>
+              <TextBox text='Software Testing'/>
+              <TextBox text='Robot Framework'/>
+              <TextBox text='Python'/>
+              <TextBox text='Test Automation'/>
+              <TextBox text='SQL'/>
+              <TextBox text='Problem Solving'/>
+              <TextBox text='Java'/>
             </div>
           </div>
         </div>

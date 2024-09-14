@@ -6,7 +6,8 @@ export default function ExperienceCard({
     title="Title",
     subtitle="...",
     company="skill 1",
-    text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat, justo cursus posuere fringilla, enim sapien elementum urna, non aliquam sem sem nec sem. Maecenas consectetur massa porta suscipit laoreet. Vestibulum quis massa ut libero malesuada."
+    paragraph1="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat, justo cursus posuere fringilla, enim sapien elementum urna, non aliquam sem sem nec sem. Maecenas consectetur massa porta suscipit laoreet. Vestibulum quis massa ut libero malesuada.",
+    paragraph2="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat, justo cursus posuere fringilla, enim sapien elementum urna, non aliquam sem sem nec sem. Maecenas consectetur massa porta suscipit laoreet. Vestibulum quis massa ut libero malesuada."
     }) {
 
   return (
@@ -16,7 +17,8 @@ export default function ExperienceCard({
         <div className={styles['skills-container']}>
             <TextBox text={company}/>
         </div>
-        {/* <p className={styles.text}>{text}</p> */}
+        <p className={styles.text}>{paragraph1}</p>
+        <p className={styles.text}>{paragraph2}</p>
     </div>
   )
 }

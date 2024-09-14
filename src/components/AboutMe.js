@@ -1,20 +1,18 @@
 import React, { useState } from 'react'
 import styles from '../styles/aboutme.module.css'
-import { Icon } from '@iconify/react';
 import TextBox from './TextBox';
 import ButtonArrowLeft from './buttons/ButtonArrowLeft';
 import ButtonArrowRight from './buttons/ButtonArrowRight';
 
 const adjectivesList = [
   <TextBox text='Analytical'/>,
-  <TextBox text='Willing to learn'/>,
+  <TextBox text='Eager to understand'/>,
   <TextBox text='Patient'/>,
   <TextBox text='Friendly'/>,
   <TextBox text='Curious'/>,
   <TextBox text='Honest'/>,
   <TextBox text='Goal-oriented'/>,
   <TextBox text='Skilled at teamwork'/>,
-
 ]
 
 export default function AboutMe() {
@@ -38,9 +36,9 @@ export default function AboutMe() {
           <div className={styles['about-me-text']}>
             <p>
               Hey I'm Jere.
-              What started as a small spark of interest in game development has grown into a deep passion
-               for the IT field. What I may lack in years of experience, I make up with curiosity and a 
-               desire to learn and understand. I am studying my fourth year in the option of software 
+              What started as a small spark of interest in game development has grown into an ever-growing interest
+               for the IT field. While still early in my career, I’m confident in sharing my insights and eager to
+               tackle challenges head-on. I am studying my fourth year in the option of software 
                development at Oulu University of Applied Sciences and work as a junior test engineer.
             </p>
             <br/>
@@ -58,10 +56,10 @@ export default function AboutMe() {
             </p>
           </div>
         </div>
-        <img className={styles['facial-image']} src={require('../assets/images/jere_10.2.-12.jpg')} alt='Facial Image'/>
-        {/* <div className={styles['facial-image']}>
-        </div> */}
+        <img className={styles['facial-image']} src={require('../assets/images/jere_10.2.-12.jpg')} alt='Portrate'/>
       </div>
+      <div className={styles['adjective-wrapper']}>
+        <p className={styles['adjective-info-text']}>My coworkers and peers could describe me as:</p>
         <div className={styles['adjective-slider']}>
           <ButtonArrowLeft onClick={prevSlide}/>
           <div className={styles['adjective-slots']}>
@@ -78,6 +76,7 @@ export default function AboutMe() {
           </div>
           <ButtonArrowRight onClick={nextSlide}/>
         </div>
+      </div>
     </div>
   )
 }

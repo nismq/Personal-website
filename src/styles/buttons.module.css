@@ -38,6 +38,7 @@
     background-color: var(--black);
     border: 1px solid var(--primary);
     color: var(--primary);
+    cursor: pointer;
 }
 
 .btn-arrow {

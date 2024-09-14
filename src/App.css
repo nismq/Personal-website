@@ -38,7 +38,7 @@
 .experience-container{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 60px;
   min-width: 340px;
   max-width: 1000px;
@@ -146,15 +146,18 @@ p {
 
 .skills-group {
   display: flex;
-  flex-direction: column;
-  gap: 18px;
+  gap: 9px;
   align-items: center;
-
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .skills-group > div {
-  flex-wrap: wrap;
-  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.skills-group > div:hover {
+  transform: scale(1.1);
 }
 
 .skills-group h3 {
@@ -176,7 +179,7 @@ p {
 .courses-container > div {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   gap: 60px;
 }
 
