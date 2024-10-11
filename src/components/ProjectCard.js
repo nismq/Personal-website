@@ -28,7 +28,7 @@ export default function ProjectCard({
           <TextBox text={skill3}/>
         </div>
         <p className={styles.text}>{text}</p>
-        <a href={url} target='_blank' rel="noreferrer" style={{textDecoration: 'none'}}>
+        <a href={url} target='_blank' rel="noreferrer" style={{textDecoration: 'none', width: 'fit-content'}}>
           <Button show_icon text='GitHub'/>
         </a>
     </div>

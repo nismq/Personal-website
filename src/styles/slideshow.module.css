@@ -37,10 +37,6 @@
     transition: transform 0.3s ease;
 }
 
-.project-photo:hover {
-    transform: scale(1.1);
-}
-
 .btn {
     background-color: var(--dark-grey);
     /* background-color: #0D0D0D; */
@@ -87,5 +83,9 @@
 
     .project-card-container {
         width: 50%;
+    }
+
+    .project-photo:hover {
+        transform: scale(1.1);
     }
 }

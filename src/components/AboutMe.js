@@ -8,6 +8,7 @@ const adjectivesList = [
   <TextBox text='Analytical'/>,
   <TextBox text='Eager to understand'/>,
   <TextBox text='Patient'/>,
+  <TextBox text='Humble'/>,
   <TextBox text='Friendly'/>,
   <TextBox text='Curious'/>,
   <TextBox text='Honest'/>,
@@ -36,10 +37,10 @@ export default function AboutMe() {
           <div className={styles['about-me-text']}>
             <p>
               Hey I'm Jere.
-              What started as a small spark of interest in game development has grown into an ever-growing interest
+              What started as a small spark of interest in game development has turned into an ever-growing interest
                for the IT field. While still early in my career, I’m confident in sharing my insights and eager to
-               tackle challenges head-on. I am studying my fourth year in the option of software 
-               development at Oulu University of Applied Sciences and work as a junior test engineer.
+               tackle challenges head-on. I am studying my fourth and final year in the option of software 
+               development at Oulu University of Applied Sciences.
             </p>
             <br/>
             <p>
@@ -58,23 +59,15 @@ export default function AboutMe() {
         </div>
         <img className={styles['facial-image']} src={require('../assets/images/jere_10.2.-12.jpg')} alt='Portrate'/>
       </div>
-      <div className={styles['adjective-wrapper']}>
-        <p className={styles['adjective-info-text']}>My coworkers and peers could describe me as:</p>
-        <div className={styles['adjective-slider']}>
-          <ButtonArrowLeft onClick={prevSlide}/>
-          <div className={styles['adjective-slots']}>
-            <div className={styles['disabled-slot']}>
-              {adjectiveIndex === 0 ? adjectivesList[adjectivesList.length -1] : adjectivesList[adjectiveIndex - 1]}
-            </div>
-            <div >
-              {adjectivesList[adjectiveIndex]}
-            </div>
-            <div className={styles['disabled-slot']}>
-              {adjectiveIndex === adjectivesList.length -1 ? adjectivesList[0] : adjectivesList[adjectiveIndex + 1]}
-            </div>
-              
+      <div className={styles['adjective-container']}>
+        <h3 className={styles['adjective-info-text']}>My coworkers and peers could describe me as:</h3>
+        <div className={styles['adjective-scroll']}>
+          <div className={styles['scroll-content']}>
+            {adjectivesList}
           </div>
-          <ButtonArrowRight onClick={nextSlide}/>
+          <div className={styles['scroll-content-2']}>
+            {adjectivesList}
+          </div>
         </div>
       </div>
     </div>

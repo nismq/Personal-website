@@ -2,6 +2,8 @@
 
 :root {
   --primary: #E1B03B;
+  /* --primary: #edce45; */
+  --selection: #785e21;
   --white: #F2F2F2;
   --grey: #404040;
   --dark-grey: #262626;
@@ -35,10 +37,14 @@
   align-self: stretch;
 }
 
+::selection {
+  background: var(--selection);
+}
+
 .experience-container{
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 60px;
   min-width: 340px;
   max-width: 1000px;
@@ -47,7 +53,7 @@
   height: auto;
 }
 
-.experience-container > div {
+.experience-container > div#experience-child {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -68,9 +74,9 @@ h1 {
   font-size: 2rem;
   font-style: normal;
   font-weight: 500;
-  letter-spacing: 1.68px;
+  /* letter-spacing: 1.68px; */
   text-transform: uppercase;
-  color: #F2F2F2;
+  color: var(--primary);
 }
 
 h2 {
@@ -171,20 +177,22 @@ p {
   gap: 60px;
   min-width: 340px;
   max-width: 1000px;
+  padding: 0px 32px;
   width: 80%;
-  padding: 0 32px;
   height: auto;
 }
 
-.courses-container > div {
+.courses-container > div{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 60px;
 }
 
-.vertical-line {
+div.vertical-line {
   min-width: 2px;
+  max-width: 2px;
+  width: 2px;
   background-color: var(--grey);
   border-radius: 2px;
 }
@@ -220,19 +228,28 @@ p {
 
   .experience-container {
     flex-direction: row;
-    gap: 80px;
-    justify-content: center;
+    gap: 60px;
+    width: 80%;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px;
   }
 
   .experience-container > div > div {
-    min-width: 400px;
+    /* min-width: 360px; */
+    width: 100%;
   }
 
   .experience-container hr {
     width: 2px;
-    min-width: 2px;
+    /* min-width: 2px; */
+    max-width: 2px;
     height: 200px;
     background-color: var(--grey);
+  }
+
+  .courses-container {
+    padding: 0px
   }
 
   .skills-container {

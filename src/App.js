@@ -11,22 +11,27 @@ import CourseCard from './components/CourseCard';
 import { useMediaQuery } from 'react-responsive';
 
 const SWIPPER_IMAGES = [
-  require('./assets/images/swipperMainPage.png'),
-  require('./assets/images/swipperFeedPage.png'),
-  require('./assets/images/swipperSwipePage.png'),
-  require('./assets/images/swipperSwipeRight.png'),
+  require('./assets/images/SWIPPER FRONTEND.png'),
+  require('./assets/images/SWIPPER FRONTEND (2).png')
 ]
 
 const CLIMATE_APP_IMAGES = [
-  require('./assets/images/climateMainPage.png')
+  require('./assets/images/CLIMATE CHANGE VISUALIZATION TOOL.png'),
+  require('./assets/images/CLIMATE CHANGE VISUALIZATION TOOL (2).png'),
+
 ]
 
 const POKEMON_APP_IMAGES = [
-  require('./assets/images/pokemonMainPage.jpg')
+  require('./assets/images/POKEMON CARD APP.png'),
+  require('./assets/images/POKEMON CARD APP (2).png'),
+
 ]
 
 const WEBSITE_IMAGES = [
-  require('./assets/images/websiteFigma.png')
+  require('./assets/images/THIS WEBSITE.png'),
+  require('./assets/images/THIS WEBSITE (2).png'),
+  require('./assets/images/THIS WEBSITE (3).png'),
+  require('./assets/images/THIS WEBSITE (4).png'),
 ]
 
 function App() {
@@ -36,8 +41,8 @@ function App() {
 
   useEffect(() => {
     if (isWideScreen){
-      setRefHeightToLineBreak()
       setTimeout(()=>{
+        setRefHeightToLineBreak()
       }, 200)
     }
   }, [isWideScreen])
@@ -96,17 +101,19 @@ function App() {
                                                              url='https://github.com/nismq/Pokemon'/>}/>   
         <hr/>
         <div ref={ref} className='experience-container'>
-          <div>
+          <div id='experience-child'>
             <h2 id='experience' >Experience</h2>
             <ExperienceCard title='Junior Test Engineer' 
-              subtitle='May 2023 - Present' 
+              subtitle='May 2023 - Sep 2024' 
               company='Topcon Healthcare Solutions'
-              paragraph1='As a Junior Test Engineer, my work involves a diverse set of responsibilities 
-              from issue testing to enhancing the quality and efficiency of our testing processes. One of my key 
-              contributions has been developing a Python script for our testing team, which ensures 
+              paragraph1='As a Junior Test Engineer, my work involved a diverse set of responsibilities 
+              from issue testing to enhancing the quality and efficiency of our testing processes. 
+              Working in the medical software field taught me a lot about quality assurance. '
+              paragraph2='One of my key 
+              contributions was developing a Python script for our testing team, which ensures 
               that all requirements are linked to corresponding test cases.'
-              paragraph2='I have actively contributed to improving our test automation by proposing
-               enhancements and providing feedback during code reviews, which has led to increased 
+              paragraph3='I actively contributed to improving our test automation by proposing
+               enhancements and providing feedback during code reviews, which led to increased 
                quality in our automated tests.'
             />
           </div>
@@ -116,17 +123,18 @@ function App() {
             : <hr/>
           }
           {/* <span style={{display: 'inline-block', width:'1px', height:'100px', background:'#000', margin: '0 2px',}}></span> */}
-          <div>
+          <div id='experience-child'>
             <h2 id='education' >Education</h2>
             <ExperienceCard title='Information technology' 
               subtitle='2021 - Present' 
               company='Oulu University of Applied Sciences' 
               paragraph1='I am studying information technology in the option of software development. 
               My education has provided a solid and diverse foundation across various areas of IT, ranging 
-              from software project management to proficiency in individual programming languages.'
+              from software project management to experience in multiple programming languages.'
               paragraph2='Throughout my studies, I have gained hands-on experience with several 
               programming languages, including Java, JavaScript, C, C++, CSS, HTML, and SQL. In my 
               elective courses, I have further developed my skills in software testing and information security.'
+              paragraph3=''
             />
           </div>
         </div>

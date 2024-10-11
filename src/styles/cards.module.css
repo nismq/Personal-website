@@ -6,6 +6,7 @@
     width: 100%;
     padding: 35px 25px;
     margin: 0 auto;
+    max-width: 470px;
     gap: 18px;
 }
 
@@ -32,6 +33,7 @@ h3 {
 @media screen and (min-width: 1000px) {
     .card#project-card{
         background-color: var(--dark-grey);
+        max-width: 500px;
         /* width: 400px; */
     }
 }

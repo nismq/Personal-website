@@ -13,7 +13,7 @@ export default function Footer() {
               <Icon icon="mdi:github" width="18" height="18" />
             </a>
         </div>
-        <p>Copyright C Jere Nissinen 2024</p>
+        <p>Copyright © Jere Nissinen 2024</p>
     </div>
   )
 }
